@@ -9,9 +9,4 @@
 预览：
 1.表格列表类型：
 ![表格列表类型](http://img.blog.csdn.net/20170421161837331?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFpZHVfMzMzMjAzNTI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center "表格列表类型")
-2.正方形图文类型：
-![正方形图文类型]
-3.矩形图文类型：
-![矩形图文类型]
-4.类微信图文列表类型：
-![类微信图文列表类型]
+从https://git.oschina.net/young520/yzzPager搬过来的，其中yzzArticlesDivPager有改过，按照easyui控件形式重新封装。详情看代码。
