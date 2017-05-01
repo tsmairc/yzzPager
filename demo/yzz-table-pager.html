@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>表格列表插件</title>
+		<link rel="stylesheet" href="../css/yzz-main.css" />
+	</head>
+
+	<body>
+
+		<div class="pager" style="width: 1000px; margin: auto;"></div>
+
+		<script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.yzz.table.pager-1.0.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var datas = [
+					['<input type="checkbox" class="yzz-checkbox" value="0">', '列一', '列二', '<a href="javascript:void(0);" class="yzz-edit">编辑</a><a href="javascript:void(0);" class="yzz-delete">删除</a>'],
+					['<input type="checkbox" class="yzz-checkbox" value="1">', '列一', '列二', '<a href="javascript:void(0);" class="yzz-edit">编辑</a><a href="javascript:void(0);" class="yzz-delete">删除</a>'],
+					['<input type="checkbox" class="yzz-checkbox" value="2">', '列一', '列二', '<a href="javascript:void(0);" class="yzz-edit">编辑</a><a href="javascript:void(0);" class="yzz-delete">删除</a>']
+				];
+				var currentPage = 1;
+				turnPage(datas, currentPage);
+			})
+
+			function turnPage(datas, currentPage) {
+				$(".pager").yzzTbalePager({
+					datas: datas,
+					page: {
+						'currentPage': currentPage,
+						'pageSize': 10,
+						'totalPage': 3,
+						'totalRecord': 23
+					},
+					cellWidths: ['5%', '30%', '30%', '10%'],
+					firstPage: function() {
+						alert('firstPage');
+					},
+					previousPage: function() {
+						alert('previousPage');
+					},
+					nextPage: function() {
+						alert('nextPage');
+					},
+					endPage: function() {
+						alert('endPage');
+					},
+					setPageSize: function(pageSize) {
+						alert('setPageSize:' + pageSize);
+					},
+					setCurrentPage: function(currentPage) {
+						alert('setCurrentPage:' + currentPage);
+					},
+					editRecord: function(id) {
+						alert('editRecord:' + id);
+					},
+					deleteRecord: function(id) {
+						alert('deleteRecord:' + id);
+					},
+					insertRecord: function() {
+						alert('insertRecord');
+					},
+					deleteBatch: function(values) {
+						alert('deleteBatch:' + values);
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>
